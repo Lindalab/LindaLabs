@@ -20,11 +20,7 @@ require('..\admin\brand.php');
 
 <body>
     <?php
-    if (checkUserRole($_SESSION['userRole']) === True) {
-        echo "I AM A BUTTOM";
-    } else {
-        echo "u are not an admin";
-    };
+    adminLoginPrivilleges();
 
     ?>
     <h1>I am here</h1>

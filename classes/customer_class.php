@@ -3,63 +3,64 @@
 require("../settings/db_class.php");
 
 /**
-*A class to handle all customer functions 
-*/
+ *A class to handle all customer functions 
+ */
 /**
  *@author Linda
  *
  */
 
 class customer_class extends db_connection
-{ 
-    //--Add Customer--//
-    public function addCustomer($customer_name,$customer_email,$customer_pass,$customer_country,$customer_city,$customer_contact,$customer_image,$user_role){
+{
+	//--Add Customer--//
+	public function addCustomer($customer_name, $customer_email, $customer_pass, $customer_country, $customer_city, $customer_contact, $customer_image, $user_role)
+	{
 		//write sql
-		$sql="INSERT INTO `customer`(`customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_image`, `user_role`) VALUES ('$customer_name','$customer_email','$customer_pass','$customer_country','$customer_city','$customer_contact','$customer_image','$user_role')";
+		$sql = "INSERT INTO `customer`(`customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_image`, `user_role`) VALUES ('$customer_name','$customer_email','$customer_pass','$customer_country','$customer_city','$customer_contact','$customer_image','$user_role')";
 		//exceute sql
 		return $this->db_query($sql);
-		
-
 	}
-    //--Select Customer or Customers--//
-    public function selectACustomer($itemid){
-		$sql="SELECT `customer_name` FROM `customer` WHERE `customer_id`='$itemid'";
+	//--Select Customer or Customers--//
+	public function selectACustomer($itemid)
+	{
+		$sql = "SELECT `customer_name` FROM `customer` WHERE `customer_id`='$itemid'";
 		return $this->getAdata($sql);
-
 	}
 
-    public function selectAllCustomers(){
-		$sql="SELECT * FROM `customer`";
+	public function selectAllCustomers()
+	{
+		$sql = "SELECT * FROM `customer`";
 		return $this->getAllData($sql);
-
 	}
-    //--Edith Customer Details--//
-    public function updateContact($itemid,$itemA,$itemB,$itemC,$itemD,$itemE,$itemF,$itemG,$itemH){
-		$sql="UPDATE `customer` SET `customer_name`='$itemA',`customer_email`='$itemB',`customer_pass`='$itemC',`customer_country`='$itemD',`customer_city`='$itemE',`customer_contact`='$itemF',`customer_image`= '$itemG',`user_role`='$itemH' WHERE `customer_id`= '$itemid' ";
+	//--Edith Customer Details--//
+	public function updateContact($itemid, $itemA, $itemB, $itemC, $itemD, $itemE, $itemF, $itemG, $itemH)
+	{
+		$sql = "UPDATE `customer` SET `customer_name`='$itemA',`customer_email`='$itemB',`customer_pass`='$itemC',`customer_country`='$itemD',`customer_city`='$itemE',`customer_contact`='$itemF',`customer_image`= '$itemG',`user_role`='$itemH' WHERE `customer_id`= '$itemid' ";
 		//exceute sql
 		return $this->db_query($sql);
-
 	}
 
-    //--Delete Customer--//
-    public function deleteCustomer($itemid){
+	//--Delete Customer--//
+	public function deleteCustomer($itemid)
+	{
 		//write sql
-		$sql="DELETE FROM `customer`  WHERE `customer_id`='$itemid'";
+		$sql = "DELETE FROM `customer`  WHERE `customer_id`='$itemid'";
 		//exceute sql
 		return $this->db_query($sql);
-		
-
 	}
- //---Check if email Exist--//
-	public function checkEmailExist($itemEmail){
-		$sql="SELECT `customer_email` FROM `customer` WHERE `customer_email`='$itemEmail'";
+
+
+	//---Check if email Exist--//
+	public function checkEmailExist($itemEmail)
+	{
+		$sql = "SELECT `customer_email` FROM `customer` WHERE `customer_email`='$itemEmail'";
 		return $this->getAdata($sql);
 	}
 
-	public function checkLoginCred($itemEmail){
-		$sql="SELECT  * FROM `customer` WHERE `customer_email`='$itemEmail'";
+	public function checkLoginCred($itemEmail)
+	{
+		$sql = "SELECT  * FROM `customer` WHERE `customer_email`='$itemEmail'";
 		return $this->getAdata($sql);
-
 	}
 }
 

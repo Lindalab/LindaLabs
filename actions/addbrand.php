@@ -18,3 +18,5 @@ if (isset($_POST['submit'])) {
         echo '<script>alert("Brand name exist")</script>';
     }
 }
+
+?>

@@ -2,6 +2,7 @@
 //require customer controller file
 require("../controllers/customer_controller.php");
 
+
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -21,7 +22,8 @@ if (isset($_POST['submit'])) {
             $_SESSION['customerContact'] = $login['customer_contact'];
             $_SESSION['customerImage'] = $login['customer_image'];
             $_SESSION['userRole'] = $login['user_role'];
-            header("location:sucess.php");
+            $_SESSION['userLogin'] = true;
+            header("location:../view/index.php");
         } else {
             echo 'Invalid password.';
         }
@@ -29,3 +31,5 @@ if (isset($_POST['submit'])) {
         echo "Email unaviable";
     }
 }
+
+?>

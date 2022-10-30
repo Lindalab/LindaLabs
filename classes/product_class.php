@@ -24,12 +24,43 @@ class product_class extends db_connection
         $sql = "SELECT`brand_name`FROM `brands` WHERE `brand_name`= '$brandName'";
         return $this->getAData($sql);
     }
+    // Select all from Brand
+    public function selectAllBrand()
+    {
+        $sql = "SELECT * FROM `brands` ";
+        return $this->getAllData($sql);
+    }
+    //Edit Brand
+    public function editBrand($brandId,$brandName)
+    {
+        $sql = "UPDATE `brands` SET `brand_name`='$brandName' WHERE `brand_id`= '$brandId'";
+        return $this->db_query($sql);
+    }
+
+
     //Add product Category
     public function addProductCategory($cat_name)
     {
         $sql = "INSERT INTO `categories`(`cat_name`) VALUES ('$cat_name')";
         return $this->db_query($sql);
     }
+    // Select All Category
+    public function selectAllCategory(){
+        $sql="SELECT * FROM `categories`";
+        return $this->getAllData($sql);
+    }
+
+    public function checkIfCategoryExist($catName){
+        $sql="SELECT  `cat_name` FROM `categories` WHERE `cat_name`='$catName' ";
+        return $this->getAData($sql);
+
+    }
+
+    public function editProductCategory($catId,$catName){
+        $sql="UPDATE `categories` SET `cat_name`='$catName' WHERE `cat_id`='$catId' ";
+        return $this->db_query($sql);
+    }
+
     //Add product 
     public function addProduct($product_cat, $product_brand, $product_title, $product_price, $product_desc, $product_image, $product_keywords)
     {

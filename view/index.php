@@ -1,6 +1,7 @@
 <?php
 require('..\admin\brand.php');
 
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -26,21 +27,22 @@ require('..\admin\brand.php');
 
 <body>
 
-    <div class="menu">
+    
         <h2>Menu</h2>
         <h6>Register </h6>
         <a href="../login/register.php"><button type="button" class="btn btn-primary">Register</button></a><br>
         <h6>Login</h6>
         <a href="../login/login.php"><button type="button" class="btn btn-primary">Login</button></a><br>
+    
 
-        <h6>Add a brand</h6>
-        <a href="#addbrandModal" class="btn btn-primary" data-toggle="modal"><span>Add brand</span></a>
+    <?php
+        if (!$_SESSION['userLogin']) {
+            return false;
+        } else {
+            adminLoginPrivilleges();
+        }
 
-        <h6>Add a Category</h6>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#categoryModal">
-            Add Product Category
-        </button>
-    </div>
+        ?>
 
     <!-- Add Brand -->
     <div id="addbrandModal" class="modal fade">
@@ -69,17 +71,21 @@ require('..\admin\brand.php');
     <div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="../actions/addbrand.php" method="POST">
+                <form action="../actions/addCategory.php" method="POST">
                     <div class="modal-header">
                         <h5 class="modal-title" id="categoryModalLabel">Add Product category</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ...
+                    <div class="form-group">
+                        <label>Category Name</label>
+                        <input type="text" class="form-control" name="catName" required>
+                    </div>
+                        
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" name="submit" value="Add Category" class="btn btn-primary">Add Category</button>
                     </div>
                 </form>
             </div>

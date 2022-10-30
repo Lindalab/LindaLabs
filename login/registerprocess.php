@@ -12,8 +12,9 @@ if(isset($_POST['submit'])){
     $image=NULL;
     $uRoles=1;
     
-    $newpassword= password_hash($password, PASSWORD_ARGON2I);
+    $newpassword= password_hash("$password", PASSWORD_DEFAULT);
 
+    
     
 
     //Check if email exists
