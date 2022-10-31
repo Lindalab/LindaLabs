@@ -21,7 +21,7 @@ class db_connection
 	*@return bolean
 	**/
 	function connect(){
-		$this->conn=mysqli_connect(SERVERNAME, USERNAME, PASSWORD,DATABASE);
+		$this->conn=mysqli_connect(SERVERNAME, HOSTNAME, PASSWORD,DATABASE);
 		if(mysqli_connect_errno()){
 			return false;
 		}
