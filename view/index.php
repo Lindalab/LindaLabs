@@ -1,8 +1,7 @@
 <?php
 require('..\admin\brand.php');
-
-
 ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -28,21 +27,18 @@ require('..\admin\brand.php');
 <body>
 
     
-        <h2>Menu</h2>
+        <!-- <h2>Menu</h2>
         <h6>Register </h6>
         <a href="../login/register.php"><button type="button" class="btn btn-primary">Register</button></a><br>
         <h6>Login</h6>
-        <a href="../login/login.php"><button type="button" class="btn btn-primary">Login</button></a><br>
+        <a href="../login/login.php"><button type="button" class="btn btn-primary">Login</button></a><br> -->
     
+      
 
-    <?php
-        if (!$_SESSION['userLogin']) {
-            return false;
-        } else {
-            adminLoginPrivilleges();
-        }
-
-        ?>
+     <?php
+    
+        adminLoginPrivilleges();
+         ?>
 
     <!-- Add Brand -->
     <div id="addbrandModal" class="modal fade">

@@ -49,13 +49,13 @@ class product_class extends db_connection
         $sql="SELECT * FROM `categories`";
         return $this->getAllData($sql);
     }
-
+    // Check if category exist already
     public function checkIfCategoryExist($catName){
         $sql="SELECT  `cat_name` FROM `categories` WHERE `cat_name`='$catName' ";
         return $this->getAData($sql);
 
     }
-
+    // Edit Category
     public function editProductCategory($catId,$catName){
         $sql="UPDATE `categories` SET `cat_name`='$catName' WHERE `cat_id`='$catId' ";
         return $this->db_query($sql);

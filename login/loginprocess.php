@@ -1,4 +1,4 @@
-<?php
+<?php error_reporting(0);
 //require customer controller file
 require("../controllers/customer_controller.php");
 
@@ -23,6 +23,7 @@ if (isset($_POST['submit'])) {
             $_SESSION['customerImage'] = $login['customer_image'];
             $_SESSION['userRole'] = $login['user_role'];
             $_SESSION['userLogin'] = true;
+            // $_SESSION['userLogin'] =1;
             header("location:../view/index.php");
         } else {
             echo 'Invalid password.';
