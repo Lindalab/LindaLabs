@@ -56,6 +56,15 @@ function editProductCategory_ctr($catId,$catName){
     return $category->editProductCategory($catId,$catName);
 
 }
+
+
+//Actions for Products
+
+function addProduct_ctr($product_cat, $product_brand, $product_title, $product_price, $product_desc, $product_image, $product_keywords){
+    $product =new product_class();
+    return $product->addProduct($product_cat, $product_brand, $product_title, $product_price, $product_desc, $product_image, $product_keywords);
+
+}
     
 
 

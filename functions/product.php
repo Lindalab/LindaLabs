@@ -7,7 +7,7 @@ function getAllBrand(){
     $brandId=NULL;
     $brandName=NULL;
     echo "
-    <select class='custom-select' name='mycat' id='inputGroupSelect01' >
+    <select class='custom-select' name='mybrand' id='mybrand' >
     ";
     foreach($data as $brand){
         $brandId=$brand['brand_id'];
@@ -33,7 +33,7 @@ function getAllCategoryDropdown(){
     $catId=NULL;
     $catName=NULL;
     echo "
-    <select class='custom-select' name='mycat' id='inputGroupSelect01' >
+    <select class='custom-select' name='mycat' id='mycat' >
     ";
     foreach($data as $category){
         $catId=$category['cat_id'];

@@ -36,7 +36,7 @@ require("../functions/product.php");
                                     </div>
 
 
-                                    <form action="" method="" style="margin:5% 20%;">
+                                    <form action="../actions/addproduct.php" method="POST" style="margin:5% 20%;">
 
 
                                         <div class="form-group">
@@ -62,7 +62,7 @@ require("../functions/product.php");
 
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="pprice">Product Price</label>
-                                            <input type="text" name="pprice" id="pprice" class="form-control" placeholder="Price" />
+                                            <input type="number" name="pprice" id="pprice" class="form-control" placeholder="Price" />
                                         </div>
 
                                         <div class="form-outline mb-4">
@@ -74,8 +74,14 @@ require("../functions/product.php");
                                             <label class="form-label" for="pkeyword">Product Keywords</label>
                                             <input type="text" name="pkeyword" id="pkeyword" class="form-control" placeholder="Keyword" />
                                         </div>
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="pkeyword">Product Imgae</label>
+                                            <input type="file" name="pkeyword" id="pkeyword" class="form-control" placeholder="Image" />
+                                        </div>
                                         <div class="text-center pt-1 mb-5 pb-1">
-                                            <input type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" class="form-control" name="submit" value="Add Product" id="addsubmit" onclick="callmeajax()" />
+                                            <input type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" name="submit" value="Add Product" id="addsubmit"  />
+
+                                            <!-- onclick="callmeajax()" -->
                                         </div>
                                     </form>
 
