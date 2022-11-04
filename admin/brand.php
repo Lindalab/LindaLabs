@@ -26,11 +26,12 @@ function adminLoginPrivilleges()
                     echo "
                  
                 <h6>Add a brand</h6>
-                <a href='#addbrandModal'class='btn btn-primary' data-toggle='modal'><span>Add brand</span></a>
+                <a href='#addbrandModal'class='btn btn-primary' data-toggle='modal'><span>Add Product brand</span></a>
                 
                 <h6>Add a Category</h6>
                 <a href='#categoryModal' class='btn btn-primary' data-toggle='modal'><span>Add Product Category</span></a>
                 <br>
+                <button type='button' class='btn btn-link'><a href='../view/addproduct.php' class='btn btn-primary' >Add Product</a></button><br>
                 <button type='button' class='btn btn-link'><a href='../login/login.php' class='btn btn-primary' >Logout</a></button><br><br>
         
                
@@ -117,3 +118,5 @@ function adminLoginPrivilleges()
 
     
 }
+
+?>
