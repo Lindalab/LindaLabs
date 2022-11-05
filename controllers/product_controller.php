@@ -65,6 +65,23 @@ function addProduct_ctr($product_cat, $product_brand, $product_title, $product_p
     return $product->addProduct($product_cat, $product_brand, $product_title, $product_price, $product_desc, $product_image, $product_keywords);
 
 }
+
+function selectAllProduct_ctr(){
+    $product=new product_class();
+    return $product->selectAllProduct();
+}
+
+function deletAProduct_ctr($productid){
+    $product=new product_class();
+    return $product->deletAProduct($productid);
+
+}
+
+function editAProduct_ctr($productid,$productCat,$productbrand,$productName,$productPrice,$productDescription,$productImage,$productKeyword){
+    $product=new product_class();
+    return $product->editAProduct($productid,$productCat,$productbrand,$productName,$productPrice,$productDescription,$productImage,$productKeyword);
+
+}
     
 
 

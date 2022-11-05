@@ -30,6 +30,8 @@ function adminLoginPrivilleges()
                 showrandbTable_fnc();
                 echo "<br><br>";
                 showrCategoryTable_fnc();
+                echo "<br><br>";
+                getAllProduct();
             }
             else{
                 echo "

@@ -67,4 +67,27 @@ class product_class extends db_connection
         $sql = "INSERT INTO `products`(`product_cat`, `product_brand`, `product_title`, `product_price`, `product_desc`, `product_image`, `product_keywords`) VALUES ('$product_cat','$product_brand','$product_title','$product_price','$product_desc','$product_image','$product_keywords')";
         return $this->db_query($sql);
     }
+
+    // Select all from Prodtc
+    public function selectAllProduct()
+    {
+        $sql = "SELECT * FROM `products` ";
+        return $this->getAllData($sql);
+    }
+
+    // Delete A product
+    public function deletAProduct($productid)
+    {
+        $sql = "DELETE FROM `products` WHERE `product_id`='$productid' ";
+        return $this->db_query($sql);
+    }
+
+     // Edit A product 
+     public function editAProduct($productid,$productCat,$productbrand,$productName,$productPrice,$productDescription,$productImage,$productKeyword)
+     {
+         $sql = "UPDATE `products` SET `product_cat`='$productCat',`product_brand`='$productbrand',`product_title`='$productName',`product_price`='$productPrice',`product_desc`='$productDescription',`product_image`='$productImage',`product_keywords`='$productKeyword' WHERE `product_id`='$productid' ";
+         return $this->db_query($sql);
+     }
+
+
 }
