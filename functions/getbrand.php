@@ -147,10 +147,10 @@ function myProducts($productId,$productCat,$productbrand,$productName,$productPr
     <td>$productImage</td>
     <td>$productKeyword</td>
     <td>
-    <a href = '?id=$productId' class='btn btn-danger btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i>Delete</i></a>
+    <a href = '?id=$productId' class='btn btn-danger btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i></i></a>
     </td>
     <td>
-    <a href = '?id=$productId&pname=$productName&category=$productCat&brand=$productbrand&pprice=$productPrice&pdes=$productDescription&pimage=$productImage&pkeyword=$productKeyword' class='btn btn-danger btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square-fill'></i>Edit</a>
+    <a href = '?id=$productId&pname=$productName&category=$productCat&brand=$productbrand&pprice=$productPrice&pdes=$productDescription&pimage=$productImage&pkeyword=$productKeyword' class='btn btn-danger btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>
     </td>
   </tr>
   ";
