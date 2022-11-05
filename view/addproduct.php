@@ -12,11 +12,9 @@ require("../functions/product.php");
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/index.css">
-
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Add Product</title>
 </head>
-
-
 
 <body>
 
@@ -27,66 +25,66 @@ require("../functions/product.php");
                 <div class="col-xl-10">
                     <div class="card rounded-3 text-black">
                         <div class="row g-0">
-                           
-                                <div class="card-body p-md-5 mx-md-4">
 
-                                    <div class="text-center">
-                                        <img src="../images/Customer/logo.jpg" style="width: 185px; height: 100px;" alt="logo">
-                                        <h4 class="mt-1 mb-5 pb-1">Add Product</h4>
+                            <div class="card-body p-md-5 mx-md-4">
+
+                                <div class="text-center">
+                                    <img src="../images/Customer/logo.jpg" style="width: 185px; height: 100px;" alt="logo">
+                                    <h4 class="mt-1 mb-5 pb-1">Add Product</h4>
+                                </div>
+
+
+                                <form style="margin:5% 20%;">
+
+
+                                    <div class="form-group">
+                                        <label for=""> Brand Names</label>
+                                        <?php
+                                        getAllBrand();
+                                        ?>
+
                                     </div>
 
+                                    <div class="form-group">
+                                        <label for=""> Category Names</label>
+                                        <?php
+                                        getAllCategoryDropdown()
+                                        ?>
 
-                                    <form action="../actions/addproduct.php" method="POST" style="margin:5% 20%;">
+                                    </div>
 
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="ptitle">Product Name</label>
+                                        <input type="text" id="ptitle" name="ptitle" class="form-control" placeholder="Product Name" />
+                                    </div>
 
-                                        <div class="form-group">
-                                            <label for=""> Brand Names</label>
-                                            <?php
-                                            getAllBrand();
-                                            ?>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="pprice">Product Price</label>
+                                        <input type="number" name="pprice" id="pprice" class="form-control" placeholder="Price" />
+                                    </div>
 
-                                        </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="pdesc">Product Description</label>
+                                        <input type="text" name="pdesc" id="pdesc" class="form-control" placeholder="Description" />
+                                    </div>
 
-                                        <div class="form-group">
-                                            <label for=""> Category Names</label>
-                                            <?php
-                                             getAllCategoryDropdown()
-                                            ?>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="pkeyword">Product Keywords</label>
+                                        <input type="text" name="pkeyword" id="pkeyword" class="form-control" placeholder="Keyword" />
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="pImage">Product Imgae</label>
+                                        <input type="file" name="pImage" id="pImage" class="form-control" placeholder="Image" />
+                                    </div>
+                                    <div class="text-center pt-1 mb-5 pb-1">
+                                        <input type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" name="submit" value="Add Product" onclick="callmeajax()" id="addsubmit" />
 
-                                        </div>
+                                        <!-- onclick="callmeajax()" -->
+                                    </div>
+                                </form>
 
-                                        <div class="form-outline mb-4">
-                                            <label class="form-label" for="ptitle">Product Name</label>
-                                            <input type="text" id="ptitle" name="ptitle" class="form-control" placeholder="Product Name" />
-                                        </div>
+                            </div>
 
-                                        <div class="form-outline mb-4">
-                                            <label class="form-label" for="pprice">Product Price</label>
-                                            <input type="number" name="pprice" id="pprice" class="form-control" placeholder="Price" />
-                                        </div>
-
-                                        <div class="form-outline mb-4">
-                                            <label class="form-label" for="pdesc">Product Description</label>
-                                            <input type="text" name="pdesc" id="pdesc" class="form-control" placeholder="Description" />
-                                        </div>
-
-                                        <div class="form-outline mb-4">
-                                            <label class="form-label" for="pkeyword">Product Keywords</label>
-                                            <input type="text" name="pkeyword" id="pkeyword" class="form-control" placeholder="Keyword" />
-                                        </div>
-                                        <div class="form-outline mb-4">
-                                            <label class="form-label" for="pkeyword">Product Imgae</label>
-                                            <input type="file" name="pkeyword" id="pkeyword" class="form-control" placeholder="Image" />
-                                        </div>
-                                        <div class="text-center pt-1 mb-5 pb-1">
-                                            <input type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" name="submit" value="Add Product" id="addsubmit"  />
-
-                                            <!-- onclick="callmeajax()" -->
-                                        </div>
-                                    </form>
-
-                                </div>
-                           
                         </div>
                     </div>
                 </div>
@@ -94,7 +92,28 @@ require("../functions/product.php");
         </div>
     </section>
 
-    
+
+
+    <!-- Modal for success form submission -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon-box">
+                        <i class="material-icons">&#xE876;</i>
+                    </div>
+                    <h4 class="modal-title w-100">Awesome!</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Product Added successfully.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary btn-block" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 
@@ -110,26 +129,37 @@ require("../functions/product.php");
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 </body>
-
 </html>
 
 <script type="text/javascript">
     function callmeajax() {
         // stop the default action of forms
         event.preventDefault();
-
-
-
         //getting form data
-        let brand = document.getElementById('brand').value;
-        let cat = document.getElementById('cat');
-        let pname = document.getElementById('ptitle').value;
-        let pprice = document.getElementById('pprice').value;
-        let pdesc = document.getElementById('pdesc').value;
-        alert(brand);
+        var brand = document.getElementById('mybrand').value;
+        var cat = document.getElementById('mycat').value;
+        var pname = document.getElementById('ptitle').value;
+        var pprice = document.getElementById('pprice').value;
+        var pdesc = document.getElementById('pdesc').value;
+        var image = document.getElementById('pImage').value;
+        var keyword = document.getElementById('pkeyword').value;
+        
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            var result = this.responseText;
 
+            if (result === "success") {
+                // alert(result);
+                $("#myModal").modal('show');
 
-        //send data for processing
+            }
+            else{
+                alert("Insertion failed");
+            }
+        }
+        xhttp.open("GET", `../actions/addproduct.php?mybrand=${brand}&mycat=${cat}&ptitle=${pname}&pprice=${pprice}&pdesc=${pdesc}&pkeyword=${pdesc}&pImage=${image}&submit=Add+Product`, true);
+        xhttp.send();
+
 
     }
 </script>

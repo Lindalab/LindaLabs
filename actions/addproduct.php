@@ -1,21 +1,23 @@
 <?php
 require("../controllers/product_controller.php");
 
-if(isset($_POST['submit'])){
-    $brand=$_POST['mybrand'];
-    $category=$_POST['mycat'];
-    $pname=$_POST['ptitle'];
-    $pprice=$_POST['pprice'];
-    $pdesc=$_POST['pdesc'];
+
+
+if(isset($_GET['submit'])){
+    $brand=$_GET['mybrand'];
+    $category=$_GET['mycat'];
+    $pname=$_GET['ptitle'];
+    $pprice=$_GET['pprice'];
+    $pdesc=$_GET['pdesc'];
     $pimage=NULL;
-    $pkeywords=$_POST['pkeyword'];
+    $pkeywords=$_GET['pkeyword'];
 
     $addproduct= addProduct_ctr($category, $brand, $pname, $pprice, $pdesc, $pimage, $pkeywords);
     if(!$addproduct){
-        echo '<script>alert("Product Addition Failed")</script>';
+        echo "failed";
     }
     else{
-        echo '<script>alert("Product Added Successfully")</script>';
+        echo "success";
     }
 }
 
