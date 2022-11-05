@@ -31,8 +31,8 @@ require('..\admin\brand.php');
         <h6>Register </h6>
         <a href="../login/register.php"><button type="button" class="btn btn-primary">Register</button></a><br>
         <h6>Login</h6>
-        <a href="../login/login.php"><button type="button" class="btn btn-primary">Login</button></a><br> -->
-    
+        <a href="../login/login.php"><button type="button" class="btn btn-primary">Login</button></a><br>
+     -->
       
 
      <?php

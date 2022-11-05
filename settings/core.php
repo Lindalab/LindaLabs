@@ -10,13 +10,11 @@ ob_start();
 
 function checkLogin(){
   
-    if($_SESSION['userLogin'] === true){
-        return true;
+    if(isset($_SESSION['userLogin']))
+    {
+        return $_SESSION['userLogin'];
     }
-    else{
-        return false;
-
-    }
+  
 }
 
 
