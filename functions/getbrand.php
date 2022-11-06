@@ -118,12 +118,12 @@ function getAllProduct(){
     <tbody>
   
   ";
-  
+
   foreach($data as $product){
     $productId=$product['product_id'];
-    $productCat=$product['product_cat'];
-    $productbrand=$product['product_brand'];
-    $productName=$product['product_title'];
+    $productCat=$product['cat_name'];
+    $productbrand=$product['brand_name'];
+    $productName=$product['products_title'];
     $productPrice=$product['product_price'];
     $productDescription=$product['product_desc'];
     $productImage=$product['product_image'];

@@ -71,7 +71,10 @@ class product_class extends db_connection
     // Select all from Prodtc
     public function selectAllProduct()
     {
-        $sql = "SELECT * FROM `products` ";
+        $sql = "select products.product_id as product_id,products.product_title as products_title ,products.product_price as product_price,products.product_desc as product_desc ,products.product_image as product_image,products.product_keywords as product_keywords,brands.brand_name as brand_name,categories.cat_name as cat_name
+        FROM products,brands,categories
+        where products.product_cat=categories.cat_id 
+        and products.product_brand = brands.brand_id";
         return $this->getAllData($sql);
     }
 
