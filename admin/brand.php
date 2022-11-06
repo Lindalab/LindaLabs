@@ -11,6 +11,7 @@ function adminLoginPrivilleges()
 {
 
     if(checkLogin() === true){
+        
         if(isset($_SESSION['userRole'])){
             if(checkUserRole($_SESSION['userRole'])){
                 echo "
@@ -32,6 +33,7 @@ function adminLoginPrivilleges()
                 showrCategoryTable_fnc();
                 echo "<br><br>";
                 getAllProduct();
+                
             }
             else{
                 echo "
@@ -39,6 +41,7 @@ function adminLoginPrivilleges()
                 <a href='#brandModal'class='btn btn-primary' data-toggle='modal'><span>Buy Products</span></a><br>
                 <a href='../admin/brand.php?Logout=Logout' class='btn btn-primary'><span>Logout</span></a>
                 ";
+                getAllProduct();
             }
 
         }
