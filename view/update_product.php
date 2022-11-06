@@ -30,6 +30,8 @@ $productId=$_GET['id'];
 </nav>
 
 
+
+
 <body>
 <!-- Edit form -->
 <section class="h-100 gradient-form" style="background-color: #eee;">
@@ -68,26 +70,27 @@ $productId=$_GET['id'];
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="ptitle">Product Name</label>
-                                        <input type="text" id="ptitle" name="ptitle" class="form-control" placeholder="Product Name" />
+                                        <input type='hidden' name='id' value='<?php echo $productId ?>'>
+                                        <input type="text" id="ptitle" name="ptitle" class="form-control" value='<?php echo $productName ?>' placeholder="Product Name" />
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="pprice">Product Price</label>
-                                        <input type="number" name="pprice" id="pprice" class="form-control" placeholder="Price" />
+                                        <input type="number" name="pprice" id="pprice" class="form-control" value='<?php echo $productPrice ?>' placeholder="Price" />
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="pdesc">Product Description</label>
-                                        <input type="text" name="pdesc" id="pdesc" class="form-control" placeholder="Description" />
+                                        <input type="text" name="pdesc" id="pdesc" class="form-control" value='<?php echo $productDescription ?>' placeholder="Description" />
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="pkeyword">Product Keywords</label>
-                                        <input type="text" name="pkeyword" id="pkeyword" class="form-control" placeholder="Keyword" />
+                                        <input type="text" name="pkeyword" id="pkeyword" class="form-control" value='<?php echo  $productKeyword ?>' placeholder="Keyword" />
                                     </div>
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="pImage">Product Imgae</label>
-                                        <input type="file" name="pImage" id="pImage" class="form-control" placeholder="Image" />
+                                        <input type="file" name="pImage" id="pImage" class="form-control"  value='<?php echo $productImage?>'placeholder="Image" />
                                     </div>
                                     <div class="text-center pt-1 mb-5 pb-1">
                                         <input type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" name="submit" value="Add Product" onclick="callmeajax()" id="addsubmit" />
