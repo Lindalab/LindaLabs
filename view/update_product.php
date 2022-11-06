@@ -1,6 +1,8 @@
 <?php
 
-$productId=$_GET['id'];
+require("../functions/product.php");
+
+  $productId=$_GET['id'];
   $productCat=$_GET['category'];
   $productbrand=$_GET['brand'];
   $productName=$_GET['pname'];
@@ -49,7 +51,7 @@ $productId=$_GET['id'];
                                 </div>
 
 
-                                <form style="margin:5% 20%;">
+                                <form action="updateproduct" method="POST" style="margin:5% 20%;">
 
 
                                     <div class="form-group">
@@ -93,7 +95,7 @@ $productId=$_GET['id'];
                                         <input type="file" name="pImage" id="pImage" class="form-control"  value='<?php echo $productImage?>'placeholder="Image" />
                                     </div>
                                     <div class="text-center pt-1 mb-5 pb-1">
-                                        <input type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" name="submit" value="Add Product" onclick="callmeajax()" id="addsubmit" />
+                                        <input type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" name="submit" value="Add Product" />
 
                                         <!-- onclick="callmeajax()" -->
                                     </div>
