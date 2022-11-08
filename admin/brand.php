@@ -55,6 +55,8 @@ function adminLoginPrivilleges()
         <a href='../login/register.php'><button type='button' class='btn btn-primary'>Register</button></a><br>
         <h6>Login</h6>
         <a href='../login/login.php'><button type='button' class='btn btn-primary'>Login</button></a><br>
+        <h6>All Product</h6>
+        <a href='../view/allproduct.php'><button type='button' class='btn btn-primary'>Products</button></a><br>
     
         
         ";

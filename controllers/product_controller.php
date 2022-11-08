@@ -82,6 +82,11 @@ function editAProduct_ctr($productid,$productCat,$productbrand,$productName,$pro
     return $product->editAProduct($productid,$productCat,$productbrand,$productName,$productPrice,$productDescription,$productImage,$productKeyword);
 
 }
+
+function searchAProduct_ctr($searchterm){
+    $product=new product_class();
+    return $product->searchAProduct($searchterm);
+}
     
 
 
