@@ -13,6 +13,7 @@ if (isset($_POST['submit'])) {
             echo "Failed";
         } else {
             echo '<script>alert("Brand name Successfully created")</script>';
+            header("location:../view/index.php");
         }
     } else {
         echo '<script>alert("Brand name exist")</script>';

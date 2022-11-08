@@ -51,7 +51,7 @@ require("../functions/product.php");
                                 </div>
 
 
-                                <form action="updateproduct" method="POST" style="margin:5% 20%;">
+                                <form action="../actions/updateproduct.php" method="POST" style="margin:5% 20%;">
 
 
                                     <div class="form-group">
