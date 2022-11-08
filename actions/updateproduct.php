@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
    
    
     $edit= editAProduct_ctr($productid, $category,$brand,$pname, $pprice,$pdesc,$pimage, $pkeywords);
-    if($edi){
+    if($edit){
         echo '<script>alert("Product Infor updated successfully ")</script>';
     }
     else{
