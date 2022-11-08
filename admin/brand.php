@@ -16,15 +16,15 @@ function adminLoginPrivilleges()
             if(checkUserRole($_SESSION['userRole'])){
                 echo "
                  
-                <h6>Add a brand</h6>
-                <a href='#addbrandModal'class='btn btn-primary' data-toggle='modal'><span>Add Product brand</span></a>
+                <h6>Welcome </h6>
+                <a href='#addbrandModal'class='btn btn-primary' data-toggle='modal' style='margin: 0px 20px;'><span>Add Product brand</span></a>
                 
-                <h6>Add a Category</h6>
-                <a href='#categoryModal' class='btn btn-primary' data-toggle='modal'><span>Add Product Category</span></a>
-                <br>
-                <button type='button' class='btn btn-link'><a href='../view/addproduct.php' class='btn btn-primary' >Add Product</a></button><br>
                 
-                <a href='../admin/brand.php?Logout=Logout' class='btn btn-primary'><span>Logout</span></a>
+                <a href='#categoryModal' class='btn btn-primary' data-toggle='modal' style='margin: 0px 20px;' ><span>Add Product Category</span></a>
+               
+                <button type='button' class='btn btn-link'><a href='../view/addproduct.php' class='btn btn-primary'  style='margin: 0px 20px;' >Add Product</a></button>
+                
+                <a href='../admin/brand.php?Logout=Logout' class='btn btn-primary'><span>Logout</span></a> <br><br>
         
                
                 ";
@@ -38,10 +38,12 @@ function adminLoginPrivilleges()
             else{
                 echo "
                 <h6>Buy a Products</h6>
-                <a href='#brandModal'class='btn btn-primary' data-toggle='modal'><span>Buy Products</span></a><br>
-                <a href='../admin/brand.php?Logout=Logout' class='btn btn-primary'><span>Logout</span></a>
+                <a href='../view/allproduct.php'class='btn btn-primary' data-toggle='modal' style='margin: 0px 20px;' ><span>Buy Products</span></a>
+                <a href='../admin/brand.php?Logout=Logout' class='btn btn-primary' style='margin: 0px 20px;'><span>Logout</span></a>
+            
+        <a href='../view/allproduct.php'><button type='button' class='btn btn-primary'> All Products<i class='bi bi-eye-fill'></i></button></a><br>
                 ";
-                getAllProduct();
+               
             }
 
         }
@@ -51,13 +53,13 @@ function adminLoginPrivilleges()
     else{
         echo "
         <h2>Menu</h2>
-        <h6>Register </h6>
-        <a href='../login/register.php'><button type='button' class='btn btn-primary'>Register</button></a><br>
-        <h6>Login</h6>
-        <a href='../login/login.php'><button type='button' class='btn btn-primary'>Login</button></a><br>
-        <h6>All Product</h6>
-        <a href='../view/allproduct.php'><button type='button' class='btn btn-primary'>Products</button></a><br>
-    
+       
+        
+        <a href='../login/register.php'><button type='button' class='btn btn-primary' style='margin: 0px 20px;' >Register</button></a>
+        
+        <a href='../login/login.php'><button type='button' class='btn btn-primary' style='margin: 0px 20px;' >Login</button></a>
+        
+        <a href='../view/allproduct.php'><button type='button' class='btn btn-primary' style='margin: 0px 20px;' >View Products<i class='bi bi-eye-fill'></i></button></a><br>
         
         ";
     }
