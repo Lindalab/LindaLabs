@@ -23,3 +23,9 @@
 </div>
 
 site for template : https://bootstrapmade.com/
+
+sites
+https://bootstrapmade.com/demo/Restaurantly/
+https://bootstrapmade.com/demo/Yummy/
+
+eric's site: https://bootstrapmade.com/demo/PhotoFolio/

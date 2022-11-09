@@ -10,7 +10,7 @@ function showrandbTable_fnc()
     $brandId = NULL;
     $brandName = NULL;
     echo "<table class='table'>
-    <thead class='thead-dark'>
+    <thead class='table-primary'>
       <tr>
         <th scope='col'>Brand Name</th>
         <th scope='col'>Delete</th>
@@ -51,7 +51,7 @@ function showrCategoryTable_fnc()
     $catId = NULL;
     $catName = NULL;
     echo "<table class='table'>
-    <thead class='thead-dark'>
+    <thead class='table-primary'>
       <tr>
         <th scope='col'>Category Name</th>
         <th scope='col'>Delete</th>
@@ -111,7 +111,7 @@ function getAllProduct(){
   echo "
 
   <table class='table'>
-    <thead class='thead-primary'>
+  <thead class='table-primary'>
       <tr>
         <th scope='col'> Product</th>
         <th scope='col'>Brand</th>
