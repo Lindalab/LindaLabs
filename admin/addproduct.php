@@ -93,64 +93,7 @@ require("../functions/product.php");
     </section>
 
 
-    <!-- <div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form>
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="categoryModalLabel">Add Product </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for=""> Brand Names</label>
-                            <?php
-                            //getAllBrand();
-                            ?>
 
-                        </div>
-
-                        <div class="form-group">
-                            <label for=""> Category Names</label>
-                            <?php
-                            //getAllCategoryDropdown()
-                            ?>
-                        </div>
-
-                        <div class="form-outline mb-4">
-                            <label class="form-label" for="ptitle">Product Name</label>
-                            <input type="text" id="ptitle" name="ptitle" class="form-control" placeholder="Product Name" />
-                        </div>
-
-                        <div class="form-outline mb-4">
-                            <label class="form-label" for="pprice">Product Price</label>
-                            <input type="number" name="pprice" id="pprice" class="form-control" placeholder="Price" />
-                        </div>
-
-                        <div class="form-outline mb-4">
-                            <label class="form-label" for="pdesc">Product Description</label>
-                            <input type="text" name="pdesc" id="pdesc" class="form-control" placeholder="Description" />
-                        </div>
-
-                        <div class="form-outline mb-4">
-                            <label class="form-label" for="pkeyword">Product Keywords</label>
-                            <input type="text" name="pkeyword" id="pkeyword" class="form-control" placeholder="Keyword" />
-                        </div>
-                        <div class="form-outline mb-4">
-                            <label class="form-label" for="pImage">Product Imgae</label>
-                            <input type="file" name="pImage" id="pImage" class="form-control" placeholder="Image" />
-                        </div>
-
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <input type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" name="submit" value="Add Product" onclick="callmeajax()" id="addsubmit" />
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> -->
 
 
 
@@ -212,7 +155,7 @@ require("../functions/product.php");
             if (result === "success") {
                 // alert(result);
                 $("#myModal").modal('show');
-                window.location.href = 'index.php';
+                window.location.href = '../view/index.php';
 
             } else {
                 alert("Insertion failed");

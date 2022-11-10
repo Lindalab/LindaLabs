@@ -18,6 +18,7 @@ if(isset($_GET['submit'])){
     }
     else{
         echo "success";
+        header("location:../view/index.php");
     }
 }
 

@@ -37,7 +37,7 @@ function showBrandRow_fnc($brandId, $brandName)
       <a href = '../actions/deleteContact.php?id=$brandId'class='btn btn-primary btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i></a>
       </td>
       <td>
-      <a href = '../view/update_brand.php?id=$brandId&brName=$brandName'class='btn btn-primary btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>
+      <a href = '../admin/update_brand.php?id=$brandId&brName=$brandName'class='btn btn-primary btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>
       </td>
     </tr>
     ";
@@ -80,7 +80,7 @@ function showCatRow_fnc($catId, $catName)
       <a href = '../actions/deleteCat.php?id=$catId'class='btn btn-primary btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i></a>
       </td>
       <td>
-      <a href = '../view/update_category.php?id=$catId&catName=$catName'class='btn btn-primary btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>
+      <a href = '../admin/update_category.php?id=$catId&catName=$catName'class='btn btn-primary btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>
       </td>
     </tr>
     ";
@@ -99,14 +99,7 @@ function getAllProduct(){
   $productDescription=NULL;
   $productImage=NULL;
   $productKeyword=NULL;
-  echo "
-  <div class='input-group mb-3'>
-  <input type='text' class='form-control' placeholder='Type here' aria-label='Recipient's username' aria-describedby='basic-addon2'>
-  <div class='input-group-append'>
-    <button class='btn btn-outline-secondary' type='button'>Search</button>
-  </div>
-</div>
-  ";
+
   
   echo "
 
@@ -159,7 +152,7 @@ function myProducts($productId,$productCat,$productbrand,$productName,$productPr
     <a href = '?id=$productId' class='btn btn-primary btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i></a>
     </td>
     <td>
-    <a href = '../view/update_product.php?id=$productId&pname=$productName&category=$productCat&brand=$productbrand&pprice=$productPrice&pdes=$productDescription&pimage=$productImage&pkeyword=$productKeyword' class='btn btn-primary btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>
+    <a href = '../admin/update_product.php?id=$productId&pname=$productName&category=$productCat&brand=$productbrand&pprice=$productPrice&pdes=$productDescription&pimage=$productImage&pkeyword=$productKeyword' class='btn btn-primary btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>
     </td>
   </tr>
   ";

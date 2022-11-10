@@ -22,7 +22,7 @@ function adminLoginPrivilleges()
                 
                 <a href='#categoryModal' class='btn btn-primary' data-toggle='modal' style='margin: 0px 20px;' ><span>Add Product Category</span></a>
                
-                <button type='button' class='btn btn-link'><a href='../view/addproduct.php' class='btn btn-primary'  style='margin: 0px 20px;' >Add Product</a></button>
+                <button type='button' class='btn btn-link'><a href='../admin/addproduct.php' class='btn btn-primary'  style='margin: 0px 20px;' >Add Product</a></button>
                 
                 <a href='../admin/brand.php?Logout=Logout' class='btn btn-primary'><span>Logout</span></a> <br><br>
         
