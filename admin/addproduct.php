@@ -34,7 +34,7 @@ require("../functions/product.php");
                                 </div>
 
 
-                                <form style="margin:5% 20%;">
+                                <form  style="margin:5% 20%;">
 
 
                                     <div class="form-group">
@@ -77,8 +77,8 @@ require("../functions/product.php");
                                         <input type="file" name="pImage" id="pImage" class="form-control" placeholder="Image" />
                                     </div>
                                     <div class="text-center pt-1 mb-5 pb-1">
-                                        <input type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" name="submit" value="Add Product" onclick="callmeajax()" id="addsubmit" />
-
+                                        <input type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" name="submit" value="Add Product" onclick="callmeajax()"  id="addsubmit" />
+                                        <!-- onclick="// callmeajax()"  -->
                                         <!-- onclick="callmeajax()" -->
                                     </div>
                                 </form>
@@ -151,9 +151,9 @@ require("../functions/product.php");
         var xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
             var result = this.responseText;
-
+               
             if (result === "success") {
-                // alert(result);
+                
                 $("#myModal").modal('show');
                 window.location.href = '../view/index.php';
 

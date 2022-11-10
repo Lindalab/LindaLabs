@@ -100,3 +100,6 @@ class product_class extends db_connection
 
 
 }
+
+
+

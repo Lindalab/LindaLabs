@@ -12,13 +12,14 @@ if(isset($_GET['submit'])){
     $pimage=NULL;
     $pkeywords=$_GET['pkeyword'];
 
+    
     $addproduct= addProduct_ctr($category, $brand, $pname, $pprice, $pdesc, $pimage, $pkeywords);
     if(!$addproduct){
         echo "failed";
     }
     else{
         echo "success";
-        header("location:../view/index.php");
+        //header("location:../view/index.php");
     }
 }
 
