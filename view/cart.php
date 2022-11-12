@@ -1,5 +1,5 @@
 <?php
-require('..\functions\product.php');
+require('..\functions\cart.php');
 ?>
 
 <!doctype html>
@@ -25,38 +25,23 @@ require('..\functions\product.php');
 
 
 <body>
-    <h4>Select a product now</h4> <br>
+    <h4>Your Cart</h4> <br>
     <!-- search box -->
-    <div class="input-group mb-3">
-        <form action="#" method="post">
-        <input type="text" class="form-control"  name="search"placeholder="Type here" aria-label="Type here to search" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" name="submit" type="submit">Search</button>
-        </div>
-        </form>
-    </div>
-    <br>
-    <a class="btn btn-primary" href="cart.php" role="button">View Cart<i class="bi bi-eye-fill"></i></a>
-    <br>
+   
     <table class="table" style="width:80%; margin: 10px 40px;">
         <thead class="table-primary">
             <tr>
                 <th scope='col'> Product</th>
                 <th scope='col'>Price</th>
                 <th scope='col'>Image</th>
-                <th scope='col'>Details</th>
-                <th scope='col'>Cart</th>
+                <th scope='col'>Quantity</th>
+                <th scope='col'>Total</th>
+                <th scope='col'>Delete</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            if(isset($_POST['submit'])){
-                $searchterm=$_POST['search'];
-                mysearchproductViewTable_fnc($searchterm);
-
-            }else{
-            myproductViewTable_fnc();
-            }
+             myCartViewTable_fnc();
             ?>
 
         </tbody>

@@ -32,6 +32,8 @@ function editBrand_ctr($brandId,$brandName){
 }
 
 
+
+
 // Actions for Category
 
 function addProductCategory_ctr($cat_name){
@@ -92,3 +94,4 @@ function searchAProduct_ctr($searchterm){
 
 //--INSERT--//
 
+?>

@@ -90,7 +90,7 @@ function myProductsaddcart_fnc($productId,$productCat,$productbrand,$productName
       <a href ='../view/single_product.php?id=$productId&pname=$productName&category=$productCat&brand=$productbrand&pprice=$productPrice&pdes=$productDescription&pimage=$productImage&pkeyword=$productKeyword' class='btn btn-primary btn-sm active' role='button' aria-pressed='true'><i class='bi bi-eye-fill'></i></a>
       </td>
       <td>
-      <a href = '../view/single_product.php?id=$productId&pname=$productName&category=$productCat&brand=$productbrand&pprice=$productPrice&pdes=$productDescription&pimage=$productImage&pkeyword=$productKeyword' class='btn btn-primary btn-sm active' role='button' aria-pressed='true'><i class='bi bi-cart-check'></i></a>
+      <a href = '../view/setCart_quantity.php?id=$productId&pname=$productName&category=$productCat&brand=$productbrand&pprice=$productPrice&pdes=$productDescription&pimage=$productImage&pkeyword=$productKeyword' class='btn btn-primary btn-sm active' role='button' aria-pressed='true'><i class='bi bi-cart-check'></i></a>
       </td>
     </tr>
     ";

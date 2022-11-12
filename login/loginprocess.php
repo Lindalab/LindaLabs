@@ -14,6 +14,7 @@ if (isset($_POST['submit'])) {
         $hashpassword = $login['customer_pass'];
         if (password_verify($password, $hashpassword)) {
             session_start();
+            $_SESSION['customerId'] = $login['customer_id'];
             $_SESSION['customerName'] = $login['customer_name'];
             $_SESSION['customerEmail'] = $login['customer_email'];
             $_SESSION['customerPasswd'] = $login['customer_pass'];

@@ -59,7 +59,7 @@ function adminLoginPrivilleges()
         
         <a href='../login/login.php'><button type='button' class='btn btn-primary' style='margin: 0px 20px;' >Login</button></a>
         
-        <a href='../view/allproduct.php'><button type='button' class='btn btn-primary' style='margin: 0px 20px;' >View Products<i class='bi bi-eye-fill'></i></button></a><br>
+      
         
         ";
     }
