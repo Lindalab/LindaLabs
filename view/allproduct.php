@@ -28,7 +28,7 @@ require('..\functions\product.php');
     <h4>Select a product now</h4> <br>
     <!-- search box -->
     <div class="input-group mb-3">
-        <form action="#" method="post">
+        <form action="#" method="get">
         <input type="text" class="form-control"  name="search"placeholder="Type here" aria-label="Type here to search" aria-describedby="basic-addon2">
         <div class="input-group-append">
             <button class="btn btn-outline-secondary" name="submit" type="submit">Search</button>
@@ -50,8 +50,8 @@ require('..\functions\product.php');
         </thead>
         <tbody>
             <?php
-            if(isset($_POST['submit'])){
-                $searchterm=$_POST['search'];
+            if(isset($_GET['submit'])){
+                $searchterm=$_GET['search'];
                 mysearchproductViewTable_fnc($searchterm);
 
             }else{
