@@ -24,6 +24,16 @@ function showAPersonCart_ctr($c_id,$ip_add){
     return $cart->showAPersonCart($c_id,$ip_add);
 }
 
+function increaseCartItemByOne_ctr($p_id,$ip_add, $c_id,$qty){
+    $cart =new cart_class();
+    return $cart->increaseCartItemByOne($p_id,$ip_add, $c_id,$qty);
+}
+
+function decreaseCartItemByOne_ctr($p_id,$ip_add, $c_id,$qty){
+    $cart = new cart_class();
+    return $cart->decreaseCartItemByOne($p_id,$ip_add, $c_id,$qty);
+}
+
 function get_client_ip()
 {
     $ipaddress = '';

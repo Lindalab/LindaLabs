@@ -28,13 +28,16 @@ require('..\functions\cart.php');
     <h4>Your Cart</h4> <br>
     <!-- search box -->
    
+    <a href="allproduct.php" class="btn btn-primary " role="button" aria-disabled="true" style=" margin: 10px 40px;">Back</a>
     <table class="table" style="width:80%; margin: 10px 40px;">
         <thead class="table-primary">
             <tr>
                 <th scope='col'> Product</th>
-                <th scope='col'>Price</th>
+                <th scope='col'> Unit Price</th>
                 <th scope='col'>Image</th>
+                <th scope='col'>Increase qty</th>
                 <th scope='col'>Quantity</th>
+                <th scope='col'>decrease Quantity</th>
                 <th scope='col'>Total</th>
                 <th scope='col'>Delete</th>
             </tr>

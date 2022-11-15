@@ -41,7 +41,8 @@ function adminLoginPrivilleges()
                 <a href='../view/allproduct.php'class='btn btn-primary' data-toggle='modal' style='margin: 0px 20px;' ><span>Buy Products</span></a>
                 <a href='../admin/brand.php?Logout=Logout' class='btn btn-primary' style='margin: 0px 20px;'><span>Logout</span></a>
             
-        <a href='../view/allproduct.php'><button type='button' class='btn btn-primary'> All Products<i class='bi bi-eye-fill'></i></button></a><br>
+                 <a href='../view/allproduct.php'><button type='button' class='btn btn-primary'> All Products<i class='bi bi-eye-fill'></i></button></a><br>
+                 
                 ";
                
             }

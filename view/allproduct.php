@@ -27,6 +27,7 @@ require('..\functions\product.php');
 <body>
     <h4>Select a product now</h4> <br>
     <!-- search box -->
+   
     <div class="input-group mb-3">
         <form action="#" method="get">
         <input type="text" class="form-control"  name="search"placeholder="Type here" aria-label="Type here to search" aria-describedby="basic-addon2">
@@ -36,7 +37,8 @@ require('..\functions\product.php');
         </form>
     </div>
     <br>
-    <a class="btn btn-primary" href="cart.php" role="button">View Cart<i class="bi bi-eye-fill"></i></a>
+    <a class="btn btn-primary" href="cart.php" role="button" style="margin: 0px 20px;" >View Cart<i class="bi bi-eye-fill"></i></a>
+    <a href="../view/index.php" class="btn btn-primary " role="button" aria-disabled="true" style=" margin: 10px 40px;">Back</a>
     <br>
     <table class="table" style="width:80%; margin: 10px 40px;">
         <thead class="table-primary">

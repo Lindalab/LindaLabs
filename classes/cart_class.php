@@ -34,6 +34,22 @@ class cart_class extends db_connection
         return $this->getAllData($sql);
     }
 
+    // updation in cart table
+
+    public function increaseCartItemByOne($p_id,$ip_add, $c_id,$qty){
+        $qty+=1;
+        $sql="UPDATE `cart` SET `qty`='$qty' WHERE `p_id`='$p_id' and `ip_add`='$ip_add' and `c_id`='$c_id'";
+        return $this->db_query($sql);
+
+    }
+
+    public function decreaseCartItemByOne($p_id,$ip_add, $c_id,$qty){
+        $qty-=1;
+        $sql="UPDATE `cart` SET `qty`='$qty' WHERE `p_id`='$p_id' and `ip_add`='$ip_add' and `c_id`='$c_id'";
+        return $this->db_query($sql);
+
+    }
+
 }
 
 
