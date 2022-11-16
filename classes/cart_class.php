@@ -50,7 +50,28 @@ class cart_class extends db_connection
 
     }
 
+    public function addToOrderTable($customer_id,$invoice_no,$order_date,$order_status){
+        $sql="INSERT INTO `orders`(`customer_id`, `invoice_no`, `order_date`, `order_status`) VALUES ('$customer_id','$invoice_no','$order_date','$order_status')";
+        $this->db_query($sql);
+        $last_id = mysqli_insert_id($this->conn);
+        return  $last_id;
+    }
+
+    public function addToPayment($amt,$customer_id,$order_id,$currency,$payment_date){
+        $sql="INSERT INTO `payment`(`amt`, `customer_id`, `order_id`, `currency`, `payment_date`) VALUES ('$amt','$customer_id','$order_id','$currency','$payment_date')";
+        return $this->db_query($sql);
+    }
+
+    public function addToOrderDetails($order_id,$product_id,$qty){
+        $sql="INSERT INTO `orderdetails`(`order_id`, `product_id`,`qty`) VALUES ('$order_id','$product_id','$qty')";
+        return $this->db_query($sql);
+    }
+
+  
+
 }
+ 
+
 
 
 

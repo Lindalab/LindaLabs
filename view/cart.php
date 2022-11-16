@@ -28,7 +28,8 @@ require('..\functions\cart.php');
     <h4>Your Cart</h4> <br>
     <!-- search box -->
    
-    <a href="allproduct.php" class="btn btn-primary " role="button" aria-disabled="true" style=" margin: 10px 40px;">Back</a>
+    <a href="allproduct.php" class="btn btn-primary " role="button" aria-disabled="true" style=" margin: 10px 40px;">Continue Shopping</a>
+    
     <table class="table" style="width:80%; margin: 10px 40px;">
         <thead class="table-primary">
             <tr>
@@ -50,6 +51,7 @@ require('..\functions\cart.php');
         </tbody>
     </table>
 
+   
 
 
 

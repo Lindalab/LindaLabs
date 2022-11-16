@@ -34,6 +34,22 @@ function decreaseCartItemByOne_ctr($p_id,$ip_add, $c_id,$qty){
     return $cart->decreaseCartItemByOne($p_id,$ip_add, $c_id,$qty);
 }
 
+function addToOrderTable_ctr($customer_id,$invoice_no,$order_date,$order_status){
+    $cart = new cart_class();
+    return $cart->addToOrderTable($customer_id,$invoice_no,$order_date,$order_status);
+}
+
+function addToPayment_ctr($amt,$customer_id,$order_id,$currency,$payment_date){
+    $cart =new cart_class();
+    return $cart->addToPayment($amt,$customer_id,$order_id,$currency,$payment_date);
+
+}
+
+function addToOrderDetails_ctr($order_id,$product_id,$qty){
+    $cart=new cart_class();
+    return $cart->addToOrderDetails($order_id,$product_id,$qty);
+}
+
 function get_client_ip()
 {
     $ipaddress = '';
